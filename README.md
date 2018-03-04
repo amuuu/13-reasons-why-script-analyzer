@@ -1,5 +1,5 @@
 # "13 Reasons Why" Script Analyzer
-This program analyzes "13 Reasons Why" series' first season's scripts and makes a word cloud of the things said in it the most. It basically analyzes what are said the most in the series. The results can be helpful to us to help sucidal people and makes us find out whether someone may refer to suicide in his/her talks.
+This program analyzes "13 Reasons Why" series' first season's scripts and makes a word cloud of the things said in it the most. It finds out what are said the most in it. The results can be helpful to us to help sucidal people and makes us find out whether someone may refer to suicide in his/her talks.
 
 ### Run
 Just download or clone this project and run this command:
