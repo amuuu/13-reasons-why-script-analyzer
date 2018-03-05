@@ -1,9 +1,13 @@
+import nltk
+
 class FileReader:
     
     stop_words=[]
     words_list=[]
+
     def __init__(self):
-        stop_words = self.read_stopwords()        
+        stop_words = self.read_stopwords()
+
 
 
     def read(self):
@@ -15,6 +19,8 @@ class FileReader:
     
 
     def read_a_file(self, file):
+        stemmer = nltk.PorterStemmer()        
+        
         # with open('words.txt','r') as f:
         for line in file:
             for word in line.split():
@@ -24,6 +30,8 @@ class FileReader:
                 # remove punctuation
                 word = self.remove_punc(word)
 
+                # normalize word
+                word = stemmer.stem(word)
                 # check if it's not a stop word
                 temp_words_list = [obj[0] for obj in self.words_list]
                 if word not in temp_words_list:
