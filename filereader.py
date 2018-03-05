@@ -21,9 +21,9 @@ class FileReader:
     def read_a_file(self, file):
         stemmer = nltk.PorterStemmer()        
         
-        # with open('words.txt','r') as f:
         for line in file:
             for word in line.split():
+
                 # lower case the word
                 word = word.lower()
 
@@ -32,13 +32,13 @@ class FileReader:
 
                 # normalize word
                 word = stemmer.stem(word)
+
                 # check if it's not a stop word
                 temp_words_list = [obj[0] for obj in self.words_list]
                 if word not in temp_words_list:
                     if word not in self.stop_words:
                         tml=[word,1]
-                        self.words_list.append(tml)
-                    
+                        self.words_list.append(tml)            
                 else:
                     x = [x for x in self.words_list if word in x][0]
                     x[1] += 1
@@ -78,8 +78,6 @@ class FileReader:
         if '\'' in word:
             word = word.replace('\'','')
 
-        # if "1" or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9" or "0" in word:
-        #     word = ""
         if "$" in word:
             word = ""
         if "https" in word:
