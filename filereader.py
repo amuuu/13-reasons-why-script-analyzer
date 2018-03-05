@@ -1,4 +1,5 @@
 import nltk
+from operator import itemgetter
 
 class FileReader:
     
@@ -11,12 +12,11 @@ class FileReader:
 
 
     def read(self):
-        words_list=[]
         for i in range(1, 15):
             file = open("episodes/%d.txt"%i,"r")
             # print(" ### FILE", i)     
             self.read_a_file(file)               
-    
+        self.words_list.sort(key=itemgetter(1), reverse=True)
 
     def read_a_file(self, file):
         stemmer = nltk.PorterStemmer()        
@@ -84,5 +84,6 @@ class FileReader:
             word = ""
         if "13" in word:
             word = ""
-
+        if len(word)==0:
+            word=""
         return word
