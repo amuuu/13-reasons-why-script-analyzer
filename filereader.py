@@ -85,5 +85,5 @@ class FileReader:
         if "13" in word:
             word = ""
         if len(word)==0:
-            word=""
+            word = ""
         return word
