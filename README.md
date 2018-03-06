@@ -7,3 +7,4 @@ Just download or clone this project and run this command:
 python main.py
 ```
 I got the scripts from [here.](https://www.springfieldspringfield.co.uk/view_episode_scripts.php?tv-show=13-reasons-why-2017&episode=s01e01)
+I used [nltk](https://www.nltk.org/) and [wordcloud](https://github.com/amueller/word_cloud) library.
